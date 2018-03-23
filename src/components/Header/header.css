@@ -1,0 +1,32 @@
+.bars .icon-bar {
+    background-color: #fff;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    width: 22px;
+}
+
+.bars .icon-bar:nth-of-type(2), 
+.bars .icon-bar:nth-of-type(3) {
+    top: 0;
+}
+
+.bars .icon-bar+.icon-bar {
+    margin-top: 4px;
+}
+
+.nav-lg {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .bars {
+        display: none;
+    }
+
+    .nav-lg {
+        display: block;
+    }
+}
