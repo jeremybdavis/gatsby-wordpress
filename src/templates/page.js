@@ -2,10 +2,8 @@ import React, {Component} from "react"
 
 class PageTemplate extends Component {
     render() {
-        const siteMetadata = this.props.data.site.siteMetadata
+        //const siteMetadata = this.props.data.site.siteMetadata
         const currentPage = this.props.data.wordpressPage
-
-        console.log(currentPage)
 
         return (
             <div>

@@ -9,14 +9,22 @@ class Header extends Component {
 
       if(nav.style.display === 'block') {
         nav.style.display = 'none';
+        nav.classList.remove('toggled');
       } else {
         nav.style.display = 'block';
+        nav.classList.add('toggled');
       }
     }
 
     render() {
         return (
-          <nav>
+          <nav
+            style={{
+              height: '80px',
+              position: 'relative',
+              zIndex: 1
+            }}
+          >
             <div className="nav-lg">
               <div className="logo">
                 <Link to="/">Logo</Link>
@@ -31,13 +39,39 @@ class Header extends Component {
               </div>
             </div>
 
-            <div className="nav-sm">
-              <button type="button" className="bars" onClick={this.navToggle}>
+            <div className="nav-sm"
+              style={{
+                height: '40px',
+              }}
+            >
+              <button 
+                type="button" 
+                className="bars" 
+                onClick={this.navToggle}
+                style={{
+                  cursor: 'pointer',
+                  height: '40px',
+                  position: 'absolute',
+                  right: 0,
+                  top: 0,
+                  zIndex: 1
+                }}
+              >
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
               </button>
-              <div className="mobile-links" style={{ display: "none" }}>
+              <div 
+                className="mobile-links" 
+                style={{ 
+                  backgroundColor: '#fff',
+                  display: "none",
+                  padding: '40px',
+                  position: 'absolute',
+                  textAlign: 'center',
+                  width: '100%'
+                }}
+              >
                 <Link to="/about" onClick={this.navToggle}>About</Link>
                 <Link to="/what-we-do" onClick={this.navToggle}>What We Do</Link>
                 <Link to="/use-case" onClick={this.navToggle}>Use Case</Link>
