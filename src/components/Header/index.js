@@ -7,11 +7,11 @@ class Header extends Component {
     navToggle() {
       let nav = document.querySelector('.mobile-links');
 
-      if(nav.style.display === 'block') {
-        nav.style.display = 'none';
+      if(nav.style.maxHeight !== '0px') {
+        nav.style.maxHeight = '0px';
         nav.classList.remove('toggled');
       } else {
-        nav.style.display = 'block';
+        nav.style.maxHeight = '300px';
         nav.classList.add('toggled');
       }
     }
@@ -61,23 +61,13 @@ class Header extends Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
               </button>
-              <div 
-                className="mobile-links" 
-                style={{ 
-                  backgroundColor: '#fff',
-                  display: "none",
-                  padding: '40px',
-                  position: 'absolute',
-                  textAlign: 'center',
-                  width: '100%'
-                }}
-              >
-                <Link to="/about" onClick={this.navToggle}>About</Link>
-                <Link to="/what-we-do" onClick={this.navToggle}>What We Do</Link>
-                <Link to="/use-case" onClick={this.navToggle}>Use Case</Link>
-                <Link to="/posts" onClick={this.navToggle}>Blog</Link>
-                <Link to="/contact" onClick={this.navToggle}>Contact</Link>
-              </div>
+              <ul className="mobile-links">
+                <li><Link to="/about" onClick={this.navToggle}>About</Link></li>
+                <li><Link to="/what-we-do" onClick={this.navToggle}>What We Do</Link></li>
+                <li><Link to="/use-case" onClick={this.navToggle}>Use Case</Link></li>
+                <li><Link to="/posts" onClick={this.navToggle}>Blog</Link></li>
+                <li><Link to="/contact" onClick={this.navToggle}>Contact</Link></li>
+              </ul>
             </div>
           </nav>
         )

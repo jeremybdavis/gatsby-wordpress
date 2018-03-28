@@ -17,8 +17,32 @@
     margin-top: 4px;
 }
 
+.mobile-links {
+    background-color: #fff;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: all .3s ease;
+    /* backgroundColor: '#fff',
+    display: "none",
+    padding: '40px',
+    position: 'absolute',
+    textAlign: 'center',
+    width: '100%' */
+}
+
+.mobile-links.toggled {
+    max-height: 300px;
+    padding: 40px;
+}
+
 .mobile-links a {
     display: block;
+}
+
+.mobile-links li {
+    list-style: none;
 }
 
 .nav-lg {
