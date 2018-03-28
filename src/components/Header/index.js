@@ -6,14 +6,7 @@ class Header extends Component {
 
     navToggle() {
       let nav = document.querySelector('.mobile-links');
-
-      if(nav.style.maxHeight !== '0px') {
-        nav.style.maxHeight = '0px';
-        nav.classList.remove('toggled');
-      } else {
-        nav.style.maxHeight = '300px';
-        nav.classList.add('toggled');
-      }
+      nav.classList.toggle('toggled');
     }
 
     render() {

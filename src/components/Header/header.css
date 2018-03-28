@@ -20,16 +20,10 @@
 .mobile-links {
     background-color: #fff;
     margin: 0;
-    max-height: 0;
+    max-height: 0px;
     overflow: hidden;
     text-align: center;
     transition: all .3s ease;
-    /* backgroundColor: '#fff',
-    display: "none",
-    padding: '40px',
-    position: 'absolute',
-    textAlign: 'center',
-    width: '100%' */
 }
 
 .mobile-links.toggled {
@@ -51,6 +45,10 @@
 
 @media (min-width: 768px) {
     .bars {
+        display: none;
+    }
+
+    .nav-sm {
         display: none;
     }
 
